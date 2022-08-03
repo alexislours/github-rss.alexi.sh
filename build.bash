@@ -1,6 +1,6 @@
 #!/bin/bash
 
-deno run --allow-all rss-fetcher.ts
-deno run --allow-all rss-builder.ts
+curl -fsSL https://deno.land/x/install/install.sh | sh
 
-npm run build
+~/.deno/bin/deno run --allow-all rss-fetcher.ts
+~/.deno/bin/deno run --allow-all rss-builder.ts
