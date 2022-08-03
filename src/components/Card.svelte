@@ -11,7 +11,7 @@
         <div class="card-actions justify-center mt-6">
             <div class="btn-group">
                 {#each TIME_PERIODS as period}
-                    <a href="https://github.com/trending/{id}?since={period.id}" class="btn w-24" target="_blank">
+                    <a href="/feeds/{period.id}/{id}.xml" class="btn w-24" target="_blank">
                         {period.label}
                     </a>
                 {/each}
