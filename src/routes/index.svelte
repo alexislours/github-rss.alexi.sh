@@ -3,7 +3,6 @@
     import Card from "../components/Card.svelte";
     import {LANGUAGES} from "../app.constants";
 
-    console.log(import.meta.env.VITE_BUILD_TIME);
     let buildTime = new Date(+import.meta.env.VITE_BUILD_TIME * 1000);
 </script>
 
