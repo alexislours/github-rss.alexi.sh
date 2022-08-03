@@ -1,0 +1,10 @@
+image: alpine:latest
+
+trigger-build:
+  only:
+    - main
+  variables:
+    VERCEL_HOOK: $VERCEL_HOOK
+  script:
+    - apk add curl
+    - curl -X POST "$VERCEL_HOOK"
