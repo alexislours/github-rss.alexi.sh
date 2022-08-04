@@ -28,7 +28,8 @@ const fetchRepositories = async (language: string, timePeriod: string) => {
     const body = await fetch(url).then(res => res.text());
     const document = new DOMParser().parseFromString(body, "text/html");
     if (!document.querySelector('.Box')) {
-        throw new Error(`GitHub is down or hit rate limit`);
+        console.log("Fetch error");
+        Deno.exit(1);
     }
     if (document.querySelector(".Box-row")) {
         document.querySelectorAll(".Box-row").forEach((row) => {
