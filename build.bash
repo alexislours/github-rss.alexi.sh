@@ -2,11 +2,20 @@
 
 set -e
 
+echo "Fetching Deno..."
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
-~/.deno/bin/deno run --allow-all rss-fetcher.ts &&
-~/.deno/bin/deno run --allow-all rss-builder.ts
-
-VITE_BUILD_TIME=$(date +%s)
-echo "VITE_BUILD_TIME=$VITE_BUILD_TIME" > .env
-npm run build
+if ./fetch.bash; then
+  echo "Scrapping done."
+  if ./build-rss.bash; then
+    echo "RSS feeds built."
+    if ./build-website.bash; then
+      echo "Website built."
+    fi
+  else
+    exit 1
+  fi
+else
+  echo "Fetch failed"
+  exit 1
+fi
