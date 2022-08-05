@@ -25,6 +25,7 @@ const fetchRepositories = async (language: string, timePeriod: string) => {
     const body = await fetch(url).then(res => res.text());
     const document = new DOMParser().parseFromString(body, "text/html");
     if (!document.querySelector('.Box')) {
+        console.error('GitHub Trending is not available');
         Deno.exit(1);
     }
     if (document.querySelector(".Box-row")) {
