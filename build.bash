@@ -5,6 +5,10 @@ set -e
 echo "Fetching Deno..."
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
+chmod +x fetch.bash
+chmod +x build-rss.bash
+chmod +x build-website.bash
+
 if ./fetch.bash; then
   echo "Scrapping done."
   if ./build-rss.bash; then

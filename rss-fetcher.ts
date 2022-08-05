@@ -22,11 +22,9 @@ const sleep = (ms: number) => {
 const fetchRepositories = async (language: string, timePeriod: string) => {
     const repositories: Repository[] = [];
     const url = `https://github.com/trending${language ? '/' + language : ''}${`?since=${timePeriod}`}`;
-    console.log(`Fetching ${url}`);
     const body = await fetch(url).then(res => res.text());
     const document = new DOMParser().parseFromString(body, "text/html");
     if (!document.querySelector('.Box')) {
-        console.log("Fetch error");
         Deno.exit(1);
     }
     if (document.querySelector(".Box-row")) {
@@ -36,11 +34,9 @@ const fetchRepositories = async (language: string, timePeriod: string) => {
                 description: row.querySelector('p')?.innerText.trim() || '',
             });
         });
-        console.log(`Found ${repositories.length} repositories`);
         REPOSITORIES[language][timePeriod] = repositories;
         await sleep(1000);
     } else {
-        console.log(`No repositories found for ${language} ${timePeriod}`);
         REPOSITORIES[language][timePeriod] = [];
         await sleep(300);
     }
