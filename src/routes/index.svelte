@@ -13,7 +13,7 @@
 <main class="flex flex-row justify-center mt-10 mb-16 flex-wrap gap-6">
     <div class="w-full flex justify-center">
         <p>Last build:
-            <span class="tooltip" data-tip="{buildTime.toISOString()}">{buildTime.toLocaleDateString()}</span>
+            <span class="tooltip" data-tip="{buildTime.toISOString()}">{buildTime.toLocaleString()}</span>
         </p>
     </div>
     {#each LANGUAGES as lang}
