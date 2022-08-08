@@ -20,7 +20,7 @@
         <p>Last build:
             <span class="tooltip" data-tip="{buildTime.toISOString()}">{buildTime.toLocaleString()}</span>
         </p>
-        <input type="text" placeholder="Search feeds..." class="input input-bordered w-full max-w-xs"
+        <input type="text" placeholder="Search feeds..." class="input text-[16px] input-bordered w-full max-w-xs"
                on:keyup={filterFeeds}/>
     </div>
     {#each filteredLanguages as lang}
