@@ -5,6 +5,8 @@ trigger-build:
     - main
   script:
     - apt-get update && apt-get install unzip curl -y
+    - curl -sL https://deb.nodesource.com/setup_18.x | bash -
+    - apt-get install nodejs -y
     - bash build.bash
     - mv build public
   artifacts:
