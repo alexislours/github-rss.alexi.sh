@@ -1,10 +1,10 @@
-image: alpine:latest
+image: ubuntu:22.04
 
 trigger-build:
   only:
     - main
   script:
-    - apk add bash curl --update
+    - apt-get update && apt-get install unzip curl --y
     - bash build.bash
     - mv build public
   artifacts:
