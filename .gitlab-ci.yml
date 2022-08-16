@@ -2,6 +2,7 @@ image: ubuntu:22.04
 
 pages:
   retry: 2
+  stage: deploy
   only:
     - main
   script:
