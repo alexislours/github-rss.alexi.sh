@@ -4,7 +4,7 @@ trigger-build:
   only:
     - main
   script:
-    - apt-get update && apt-get install unzip curl --y
+    - apt-get update && apt-get install unzip curl -y
     - bash build.bash
     - mv build public
   artifacts:
