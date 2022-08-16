@@ -1,6 +1,7 @@
 image: ubuntu:22.04
 
 pages:
+  retry: 2
   only:
     - main
   script:
