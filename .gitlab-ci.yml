@@ -4,7 +4,7 @@ trigger-build:
   only:
     - main
   script:
-    - apk add bash --update
+    - apk add bash curl --update
     - bash build.bash
     - mv build public
   artifacts:
