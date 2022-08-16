@@ -1,6 +1,6 @@
 image: ubuntu:22.04
 
-trigger-build:
+pages:
   only:
     - main
   script:
