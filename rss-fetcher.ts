@@ -20,6 +20,7 @@ const sleep = (ms: number) => {
 }
 
 const fetchRepositories = async (language: string, timePeriod: string) => {
+    console.log(`Fetching ${language} repositories for ${timePeriod}...`);
     const repositories: Repository[] = [];
     const url = `https://github.com/trending${language ? '/' + language : ''}${`?since=${timePeriod}`}`;
     const body = await fetch(url).then(res => res.text());
