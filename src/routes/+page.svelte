@@ -2,9 +2,6 @@
     import Navbar from "../components/Navbar.svelte";
     import Card from "../components/Card.svelte";
     import {LANGUAGES} from "../app.constants";
-	export const prerender = {
-		default: true
-	};
 
     let filteredLanguages = LANGUAGES;
     let filter = "";
