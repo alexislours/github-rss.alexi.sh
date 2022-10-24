@@ -31,6 +31,15 @@ LANGUAGES.forEach((language) => {
     })
 })
 
+let initialCount = result.length;
+result = result.filter((language, index, self) => {
+    return index === self.findIndex((l) => (
+        l.id === language.id
+    ))
+})
+
+console.log(`Found ${initialCount - result.length} duplicates, ${result.length} unique languages.`)
+
 const results = `export const TIME_PERIODS: {id: string, label: string}[] = [
     {
         id: 'daily',

@@ -371,10 +371,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
     "label": "Clarity"
   },
   {
-    "id": "classic-asp",
-    "label": "Classic ASP"
-  },
-  {
     "id": "clean",
     "label": "Clean"
   },
@@ -681,10 +677,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
   {
     "id": "emberscript",
     "label": "EmberScript"
-  },
-  {
-    "id": "e-mail",
-    "label": "E-mail"
   },
   {
     "id": "eq",
@@ -1149,10 +1141,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
   {
     "id": "jflex",
     "label": "JFlex"
-  },
-  {
-    "id": "jinja",
-    "label": "Jinja"
   },
   {
     "id": "jison",
@@ -2491,10 +2479,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
     "label": "Visual Basic .NET"
   },
   {
-    "id": "visual-basic-.net",
-    "label": "Visual Basic .NET"
-  },
-  {
     "id": "volt",
     "label": "Volt"
   },
@@ -2541,10 +2525,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
   {
     "id": "whiley",
     "label": "Whiley"
-  },
-  {
-    "id": "wikitext",
-    "label": "Wikitext"
   },
   {
     "id": "win32-message-file",
@@ -2669,10 +2649,6 @@ export const LANGUAGES: {id: string, label: string}[] = [
   {
     "id": "zap",
     "label": "ZAP"
-  },
-  {
-    "id": "zeek",
-    "label": "Zeek"
   },
   {
     "id": "zenscript",
