@@ -32,7 +32,7 @@ const fetchRepositories = async (language: string, timePeriod: string) => {
     if (document.querySelector(".Box-row")) {
         document.querySelectorAll(".Box-row").forEach((row) => {
             repositories.push({
-                name: row.querySelector('h1 > a').innerText.replace(/\s/g, ''),
+                name: row.querySelector('h2 > a').innerText.replace(/\s/g, ''),
                 description: row.querySelector('p')?.innerText.trim() || '',
             });
         });
