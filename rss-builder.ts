@@ -20,8 +20,7 @@ Object.keys(data).forEach((language) => {
         <title>${XMLEncode(`GitHub Trending ${langLabel} - ${timeLabel}`)}</title>
         <description>${XMLEncode(`Daily Trending ${langLabel} repositories on GitHub`)}</description>
         <pubDate>${new Date().toUTCString()}</pubDate>
-        <link>https://github-rss.alexi.sh</link>
-    </channel>`
+        <link>https://github-rss.alexi.sh</link>`
         data[language][timePeriod].forEach((repo) => {
             RSS += `
     <item>
@@ -31,6 +30,7 @@ Object.keys(data).forEach((language) => {
     </item>`
         });
         RSS += `
+    </channel>
 </rss>`
         Deno.writeTextFile(`./static/feeds/${timePeriod}/${langId ?? language}.xml`, RSS);
     });
