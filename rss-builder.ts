@@ -32,6 +32,6 @@ Object.keys(data).forEach((language) => {
         RSS += `
     </channel>
 </rss>`
-        Deno.writeTextFile(`./static/feeds/${timePeriod}/${decodeURIComponent(langId) ?? decodeURIComponent(language)}.xml`, RSS);
+        Deno.writeTextFile(`./static/feeds/${timePeriod}/${ langId ? decodeURIComponent(langId) : decodeURIComponent(language)}.xml`, RSS);
     });
 });
